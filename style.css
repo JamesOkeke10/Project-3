@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+/* Basic body styling */
+body {
+    font-family: "Assistant", sans-serif;
+    font-size: 16px;
+}
+
+/* Header styling */
+header {
+    height: 105px;
+    background-color: burlywood;
+}
+
+/* Hero section styling */
+.hero {
+    height: 200px;
+    background-color: chocolate;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.hero p {
+    padding-top: 75px; /* Centers text vertically in the hero section */
+}
+
+/* Main title styling */
+h1 {
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    font-family: "Truculenta", sans-serif;
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex;
+    justify-content: center; /* Centers navigation items horizontally */
+    background-color: bisque;
+    padding: 15px 0;
+}
+
+/* Styling for navigation items */
+nav ul {
+    display: flex;
+    gap: 30px; /* Adds spacing between navigation items */
+}
+
+nav ul li {
+    list-style: none; /* Removes bullet points from list items */
+}
+
+/* Link styling in navigation bar */
+nav ul li a {
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 10px; /* Adds padding to make clickable area larger */
+}
+
+nav ul li a:hover {
+    color: chocolate; /* Hover effect color change */
+}
+
+/* Flexbox setup for content area with three columns */
+main .content {
+    display: flex;
+    gap: 20px; /* Adds spacing between columns */
+    padding: 20px;
+}
+
+/* Base styling for each content div */
+.content div {
+    flex: 1;
+    padding: 15px;
+    background-color: #f4f4f4; /* Light grey background for contrast */
+}
+
+/* Allows the last div to grow and take up more space */
+.content .grow {
+    flex: 2;
+}
+/* Gallery section with two rows of images */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three images per row */
+    gap: 20px; /* Space between images */
+    padding: 20px;
+}
+
+/* Ensures images fit their container without distortion */
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/* Footer styling with flex layout */
+footer {
+    display: flex;
+    justify-content: space-around; /* Space between each footer column */
+    background-color: burlywood;
+    padding: 20px;
+}
+
+/* Base styling for each footer div */
+footer div {
+    flex: 1;
+    padding: 15px;
+}
+
+/* Allows the map section to grow larger */
+footer .map {
+    flex: 2;
+}
+
+/* Mobile styling for screen widths 768px and below */
+@media (max-width: 768px) {
+    /* Stacks navigation items in a column on mobile */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Stacks content area in a column and reverses order on mobile */
+    main .content {
+        flex-direction: column-reverse;
+    }
+
+    /* Footer stacks in a single column on mobile */
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
